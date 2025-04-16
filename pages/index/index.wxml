@@ -1,4 +1,4 @@
 <!--index.wxml-->
 <view class="container">
 </view>
-<footer-bar avatarUrl="/images/man.png" name="农锦丰" studentId="202200406093" />
+<footer-bar avatarUrl="/images/man.png" name="软件223 农锦丰" studentId="202200406093" />
