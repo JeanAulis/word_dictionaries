@@ -1,12 +1,9 @@
 Page({
   data: {
-    user_num: '',
+    // 删除 user_num
     user_passwd: '',
     user_name: '',
     user_email: ''
-  },
-  onInputUserNum(e) {
-    this.setData({ user_num: e.detail.value });
   },
   onInputUserPasswd(e) {
     this.setData({ user_passwd: e.detail.value });
@@ -22,7 +19,7 @@ Page({
       url: 'https://你的服务器地址/api/register',
       method: 'POST',
       data: {
-        user_num: this.data.user_num,
+        // 不传 user_num
         user_passwd: this.data.user_passwd,
         user_name: this.data.user_name,
         user_email: this.data.user_email

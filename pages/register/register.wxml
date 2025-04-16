@@ -1,7 +1,5 @@
 <view class="register-container">
-  <view class="form-group">
-    <input placeholder="请输入账号" type="text" model:value="{{user_num}}" bindinput="onInputUserNum"/>
-  </view>
+  <!-- 删除账号输入框 -->
   <view class="form-group">
     <input placeholder="请输入密码" password="true" model:value="{{user_passwd}}" bindinput="onInputUserPasswd"/>
   </view>
@@ -9,7 +7,7 @@
     <input placeholder="请输入用户名" type="text" model:value="{{user_name}}" bindinput="onInputUserName"/>
   </view>
   <view class="form-group">
-    <input placeholder="请输入邮箱(选填)" type="text" model:value="{{user_email}}" bindinput="onInputUserEmail"/>
+    <input placeholder="请输入邮箱" type="text" model:value="{{user_email}}" bindinput="onInputUserEmail"/>
   </view>
   <button type="primary" bindtap="onRegister">注册</button>
 </view>
