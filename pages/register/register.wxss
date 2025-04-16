@@ -15,3 +15,10 @@ input {
 button {
   margin-top: 24rpx;
 }
+.title {
+  display: block;
+  text-align: center;
+  font-size: 48rpx;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
