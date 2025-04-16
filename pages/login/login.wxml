@@ -1,3 +1,11 @@
-<!--pages/login.wxml-->
-<text>pages/login.wxml</text>
+<view class="login-container">
+  <view class="form-group">
+    <input placeholder="请输入账号" type="text" model:value="{{user_num}}" bindinput="onInputUserNum"/>
+  </view>
+  <view class="form-group">
+    <input placeholder="请输入密码" password="true" model:value="{{user_passwd}}" bindinput="onInputUserPasswd"/>
+  </view>
+  <button type="primary" bindtap="onLogin">登录</button>
+  <button type="default" bindtap="goRegister">去注册</button>
+</view>
 <footer-bar avatarUrl="/images/man.png" name="农锦丰" studentId="202200406093" />

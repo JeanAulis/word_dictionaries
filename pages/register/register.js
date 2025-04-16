@@ -17,27 +17,24 @@ Page({
   onInputUserEmail(e) {
     this.setData({ user_email: e.detail.value });
   },
-  onLogin() {
+  onRegister() {
     wx.request({
-      url: 'https://你的服务器地址/api/login',
+      url: 'https://你的服务器地址/api/register',
       method: 'POST',
       data: {
         user_num: this.data.user_num,
-        user_passwd: this.data.user_passwd
+        user_passwd: this.data.user_passwd,
+        user_name: this.data.user_name,
+        user_email: this.data.user_email
       },
       success: res => {
         if (res.data.code === 0) {
-          wx.showToast({ title: '登录成功', icon: 'success' });
-          // 登录成功后的跳转或处理
+          wx.showToast({ title: '注册成功', icon: 'success' });
+          wx.redirectTo({ url: '/pages/login/login' });
         } else {
-          wx.showToast({ title: res.data.msg || '登录失败', icon: 'none' });
+          wx.showToast({ title: res.data.msg || '注册失败', icon: 'none' });
         }
       }
-    });
-  },
-  goRegister() {
-    wx.navigateTo({
-      url: '/pages/register/register'
     });
   }
 })
