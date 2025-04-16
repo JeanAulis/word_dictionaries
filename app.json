@@ -1,10 +1,11 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/login"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "词典",
+    "navigationBarTitleText": "成语词典",
     "navigationBarBackgroundColor": "#ffffff"
   },
   "style": "v2",
