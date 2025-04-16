@@ -1,2 +1,3 @@
 <!--pages/login.wxml-->
 <text>pages/login.wxml</text>
+<footer-bar avatarUrl="/images/man.png" name="农锦丰" studentId="202200406093" />
