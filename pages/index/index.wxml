@@ -1,4 +1,12 @@
 <!--index.wxml-->
 <view class="container">
+  <view>
+    <input placeholder="输入成语" type="text" />
+  </view>
+  <button >查找</button>
+  <text> </text>
+  <scroll-view>
+  
+  </scroll-view>
 </view>
 <footer-bar avatarUrl="/images/man.png" name="软件223 农锦丰" studentId="202200406093" />
