@@ -41,7 +41,7 @@ Page({
     
     // 请求后端API查询成语
     wx.request({
-      url: 'http://localhost:8080/word_dict/api/cy/search',
+      url: 'http://localhost:8080/word_dict_war/api/cy/search',
       data: {
         keyword: keyword
       },
@@ -93,7 +93,7 @@ Page({
     });
     
     wx.request({
-      url: 'http://localhost:8080/word_dict/api/cy',
+      url: 'http://localhost:8080/word_dict_war/api/cy',
       method: 'GET',
       success: (res) => {
         if (res.statusCode === 200) {
