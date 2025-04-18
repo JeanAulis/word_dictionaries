@@ -11,10 +11,6 @@ Page({
     currentCy: null
   },
   
-  onLoad() {
-    // 页面加载时，可以加载一些热门成语
-    // this.loadHotCy();
-  },
   
   onInputChange(e) {
     this.setData({
@@ -39,16 +35,16 @@ Page({
       cyList: []
     });
     
-    // 修改为你的后端实际地址和端口
     const searchUrl = `http://localhost:8124/api/cy/search?name=${encodeURIComponent(keyword)}`;
     
     wx.request({
       url: searchUrl,
       method: 'GET',
       success: (res) => {
-        if (res.statusCode === 200 && res.data.success) {
+        console.log(res.data);
+        if (res.statusCode === 200 && Array.isArray(res.data)) {
           this.setData({
-            cyList: res.data.data,
+            cyList: res.data,
             loading: false
           });
         } else {
@@ -82,8 +78,6 @@ Page({
       showDetail: false
     });
   },
-  
-  // 加载热门成语示例
   
 })
 
