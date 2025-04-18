@@ -39,12 +39,11 @@ Page({
       cyList: []
     });
     
-    // 请求后端API查询成语
+    // 修改为你的后端实际地址和端口
+    const searchUrl = `http://localhost:8124/api/cy/search?name=${encodeURIComponent(keyword)}`;
+    
     wx.request({
-      url: 'http://localhost:8124/word_dict_war/api/cy/search',
-      data: {
-        keyword: keyword
-      },
+      url: searchUrl,
       method: 'GET',
       success: (res) => {
         if (res.statusCode === 200 && res.data.success) {
@@ -61,7 +60,6 @@ Page({
         }
       },
       fail: (err) => {
-        console.error('搜索失败', err);
         this.setData({
           error: true,
           errorMsg: '网络连接失败，请检查网络设置',
@@ -86,37 +84,6 @@ Page({
   },
   
   // 加载热门成语示例
-  loadHotCy() {
-    this.setData({
-      loading: true,
-      error: false
-    });
-    
-    wx.request({
-      url: 'http://localhost:8124/word_dict_war/api/cy',
-      method: 'GET',
-      success: (res) => {
-        if (res.statusCode === 200) {
-          this.setData({
-            cyList: res.data.slice(0, 10), // 只显示前10个
-            loading: false
-          });
-        } else {
-          this.setData({
-            error: true,
-            errorMsg: '加载失败，请稍后重试',
-            loading: false
-          });
-        }
-      },
-      fail: (err) => {
-        console.error('加载失败', err);
-        this.setData({
-          error: true,
-          errorMsg: '网络连接失败，请检查网络设置',
-          loading: false
-        });
-      }
-    });
-  }
+  
 })
+

@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "footer-bar": "../footer/footer"
-  }
+  },
+  "navigationBarTitleText": "成语词典"
 }
