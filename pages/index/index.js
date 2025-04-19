@@ -41,7 +41,7 @@ Page({
       url: searchUrl,
       method: 'GET',
       success: (res) => {
-        console.log(res.data);
+        console.log(res.data)
         if (res.statusCode === 200 && Array.isArray(res.data)) {
           this.setData({
             cyList: res.data,
