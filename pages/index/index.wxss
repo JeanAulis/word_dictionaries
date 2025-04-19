@@ -140,3 +140,10 @@
   font-weight: bold;
   color: #333;
 }
+
+.copy-tip {
+  text-align: right;
+  color: #bbb;
+  font-size: 24rpx;
+  margin-top: 16rpx;
+}

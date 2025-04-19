@@ -13,4 +13,4 @@
   </view>
   <button type="primary" bindtap="onRegister">注册</button>
 </view>
-<footer-bar avatarUrl="/images/man.png" name="软件223 农锦丰" studentId="202200406093" />
+<footer-bar />

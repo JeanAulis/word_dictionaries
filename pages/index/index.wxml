@@ -21,6 +21,7 @@
       <view class="cy-content">释义：{{item.content || '无'}}</view>
       <view class="cy-derivation">出处：{{item.derivation || '无'}}</view>
       <view class="cy-samples">例句：{{item.samples || '无'}}</view>
+      <view class="copy-tip">点击此卡片在弹窗内可复制内容</view>
     </view>
   </scroll-view>
   
@@ -32,28 +33,28 @@
   <view class="detail-modal" wx:if="{{showDetail}}">
     <view class="modal-content">
       <view class="modal-header">
-        <text class="modal-title">{{currentCy.name}}</text>
+        <text class="modal-title" user-select="true">{{currentCy.name}}</text>
         <text class="close-btn" bindtap="closeDetail">×</text>
       </view>
       <view class="modal-body">
         <view class="detail-item">
-          <text class="detail-label">拼音：</text>
-          <text>{{currentCy.spell || '无'}}</text>
+          <text class="detail-label" user-select="true">拼音：</text>
+          <text user-select="true">{{currentCy.spell || '无'}}</text>
         </view>
         <view class="detail-item">
-          <text class="detail-label">释义：</text>
-          <text>{{currentCy.content || '无'}}</text>
+          <text class="detail-label" user-select="true">释义：</text>
+          <text user-select="true">{{currentCy.content || '无'}}</text>
         </view>
         <view class="detail-item">
-          <text class="detail-label">出处：</text>
-          <text>{{currentCy.derivation || '无'}}</text>
+          <text class="detail-label" user-select="true">出处：</text>
+          <text user-select="true">{{currentCy.derivation || '无'}}</text>
         </view>
         <view class="detail-item">
-          <text class="detail-label">例句：</text>
-          <text>{{currentCy.samples || '无'}}</text>
+          <text class="detail-label" user-select="true">例句：</text>
+          <text user-select="true">{{currentCy.samples || '无'}}</text>
         </view>
       </view>
     </view>
   </view>
 </view>
-<footer-bar avatarUrl="/images/man.png" name="软件223 农锦丰" studentId="202200406093" />
+<footer-bar />
