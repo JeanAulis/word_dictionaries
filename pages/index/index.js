@@ -18,6 +18,10 @@ Page({
     });
   },
   
+  onInputConfirm(e) {
+    this.searchCy();
+  },
+  
   searchCy() {
     const keyword = this.data.keyword.trim();
     if (!keyword) {

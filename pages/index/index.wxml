@@ -1,9 +1,10 @@
 <!--index.wxml-->
 <view class="container">
+  <text>欢迎使用成语词典小程序</text>
   <view class="search-box">
-    <input placeholder="输入成语关键词" type="text" bindinput="onInputChange" value="{{keyword}}" />
-    <button bindtap="searchCy" class="search-btn">查找</button>
+    <input placeholder="输入成语关键词" type="text" bindinput="onInputChange" value="{{keyword}}" confirm-type="search" bindconfirm="onInputConfirm" />
   </view>
+  <button bindtap="searchCy" class="search-btn" form-type="submit">查找</button>
   
   <view wx:if="{{loading}}" class="loading">
     <text>加载中...</text>
