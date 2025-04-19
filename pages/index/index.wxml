@@ -18,6 +18,8 @@
       <view class="cy-name">{{item.name}}</view>
       <view class="cy-spell">拼音：{{item.spell || '无'}}</view>
       <view class="cy-content">释义：{{item.content || '无'}}</view>
+      <view class="cy-derivation">出处：{{item.derivation || '无'}}</view>
+      <view class="cy-samples">例句：{{item.samples || '无'}}</view>
     </view>
   </scroll-view>
   

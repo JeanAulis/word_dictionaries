@@ -67,11 +67,19 @@
 .cy-content {
   font-size: 28rpx;
   color: #666;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  white-space: normal;
+  word-break: break-all;
+  margin-bottom: 10rpx;
+}
+
+.cy-derivation,
+.cy-samples {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+  /* 让内容自动换行显示 */
+  white-space: normal;
+  word-break: break-all;
 }
 
 /* 详情弹窗样式 */
