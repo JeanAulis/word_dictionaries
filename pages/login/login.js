@@ -19,16 +19,18 @@ Page({
   },
   onLogin() {
     wx.request({
-      url: 'https://你的服务器地址/api/login',
+      url: 'http://localhost:8124/api/user/login',
       method: 'POST',
       data: {
-        user_num: this.data.user_num,
-        user_passwd: this.data.user_passwd
+        userNum: this.data.user_num,
+        userName: this.data.user_num,
+        userEmail: this.data.user_num,
+        userPasswd: this.data.user_passwd
       },
       success: res => {
-        if (res.data.code === 0) {
+        if (res.data.code === 200) {
           wx.showToast({ title: '登录成功', icon: 'success' });
-          // 登录成功后的跳转或处理
+          wx.redirectTo({ url: '/pages/index/index' });
         } else {
           wx.showToast({ title: res.data.msg || '登录失败', icon: 'none' });
         }
